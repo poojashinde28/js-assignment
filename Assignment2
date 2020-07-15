@@ -1,0 +1,109 @@
+Q1.Mainly used to log(print) the output to the console. 
+console. log(10)
+Console.error()-Used to log error message to the console. Useful in testing of code.
+Console.warn()-Used to log warning message to the console.
+Console.warn()-Used to clear the console. 
+Console.time() and Console.timeend()- Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object
+console.table(); prints the output in table format
+
+
+<html>
+    <head>
+    <title>my first project</title>
+    </head>
+    <body>
+        <script>      
+    
+console.log('abc'); 
+console.error(); 
+console.warn(); 
+console.table({'a':1, 'b':2}); 
+
+
+console.time('abc'); 
+
+ let fun =  function(){ 
+
+     console.log('fun is running'); 
+
+ } 
+
+ let fun2 = function(){ 
+
+     console.log('fun2 is running..'); 
+
+ } 
+
+ fun(); // calling fun(); 
+
+ fun2(); // calling fun2(); 
+
+console.timeEnd('abc'); 
+
+
+           
+        </script>
+       
+    </body>
+</html>
+
+
+Q2 let allows you to declare variables that are limited to the scope of a block statement, or expression on which it is used, unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope
+ The variables declared by the let keyword are mutual. It means that you can change their values anytime you wanHowever, variables created by the const keyword are immutable. In other words, you can’t reassign them to different values. Trying to reassign a constant variable will result in a TypeError.
+variable you declare using the const keyword must be immediately initialized to a value.
+Variable declared as const are block scoped. You can change value of const with object reference only.
+<html>
+    <head>
+    <title>my first project</title>
+    </head>
+    <body>
+        <script>      
+    function varTest() {
+  var x = 1;
+  {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+
+function letTest() {
+  let x = 1;
+  {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+varTest()
+letTest() 
+const RATE = 0.1;
+RATE = 0.2;  //TypeError                                  const person = { age: 20 };
+person.age = 30; 
+console.log(person.age); // 30
+
+
+
+           
+        </script>
+       
+    </body>
+</html>
+
+
+Q3.
+
+1.number for numbers of any kind: integer or floating-point, integers are limited by ±253.
+Var number=10;
+2.bigint is for integer numbers of arbitrary length.
+3.string for strings. A string may have zero or more characters, there’s no separate single-character type.
+Var strin="hello";
+4.boolean for true/false.
+Var a=true;
+5.null for unknown values – a standalone type that has a single value null.
+Var b=" ";
+6.undefined for unassigned values – a standalone type that has a single value undefined.
+Var c;
+7.object for more complex data structures.
+symbol for unique identifiers.
+Var d={a:10,b:20};
