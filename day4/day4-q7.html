@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		hello
+	</title>
+	
+</head>
+<body>
+	<script>
+    //document.write("7th");
+    function primenosTo(max)
+{
+    var store  = [], i, j, primes = [];
+    for (i = 2; i <= max; ++i) 
+    {
+        if (!store [i]) 
+          {
+            primes.push(i);
+            for (j = i << 1; j <= max; j += i) 
+            {
+                store[j] = true;
+               
+            }
+        }
+    }
+    return primes;
+}
+var x=prompt("enter a number");
+var y=Number(x);
+console.log(primenosTo(y));
+
+
+</script>
+</body>
+</html>
