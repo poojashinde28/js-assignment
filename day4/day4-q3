@@ -1,0 +1,18 @@
+  
+  <html>
+    <head>
+    <title>my first js</title>
+    
+    </head>
+    <body>
+ <script>
+    //document.write("3rd");
+    var shoppinglist=['biscuit\n','choclate\n','dry_fruits\n','milk\n','rice\n'];
+    document.write("my shopping list :\n",shoppinglist,'<br>')
+    var shoppingbasket=shoppinglist;
+    shoppingbasket.push('sugar\n','oil\n','tea_powder\n','juice\n');
+    document.write("after adding few more items :\n",shoppingbasket,'<br>');
+
+</script>
+  </body>
+</html>
