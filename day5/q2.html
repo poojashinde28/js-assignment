@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>hello there</title>
+    </head>
+        <body>
+            <script>
+
+class User {
+    constructor(name, age,email) {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.luCoins = 0;
+      this.courses = [];
+    }
+
+    static greet(){
+        console.log("Hello There");
+    }
+
+    login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }
+    
+    getDetails(){
+        console.log(`Name is ${this.name}, email is ${this.email}`);
+        return this;
+    }
+
+}
+
+class Moderator extends User{
+    constructor(name,age,email,luCoins,role){
+        super(name,age,email,luCoins);
+        this.role = role;
+    }
+
+    addcoins(user){
+        user.luCoins++;
+        console.log(user,this.luCoins,'changes done by moderator',this.name);
+    }
+    removecoins(user){
+        user.luCoins--;
+        console.log(user ,this.luCoins,'changes done by moderator',this.name);
+
+    }
+
+   
+
+}
+
+class Admin extends Moderator{
+   addCourse(user,course){
+       user.courses.push(course);
+       console.log(user);
+
+   }
+   deleteCourse(user,course){
+       user.courses.pop(course);
+       console.log(user);
+   }
+}
+
+
+let user1 = new User('Pooja',25,'p@gmail.com')
+let user2 = new User('dhruta',24,'d@gmai.com')
+let mod = new Moderator('sanjana',24,'s@gmail.com','Moderator');
+let admin = new Admin('Rucha',25,'r@gmail.com');
+let users = [user1,user2,mod,admin];
+
+users.forEach(element => {
+    console.log(element);
+});
+
+User.greet();
+user1.login()
+admin.addCourse(user1,'Javascript');
+admin.addCourse(user1,'Python');
+admin.addCourse(user1,'html');
+admin.addCourse(user1,'java');
+admin.deleteCourse(user1,'python');
+
+
+
+
+ 
+mod.addcoins(user1);
+ mod.addcoins(user2);
+ mod.removecoins(user1);
+  user1.logout()
+  user2.login();
+  admin.addCourse(user2,'Javascript');
+admin.addCourse(user2,'Python');
+user1.logout()
+
+// user1.login().addCoins().addCoins().getDetails().logout();
+
+
+// console.log(users);
+</script>
+</body>
+</html>
