@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> hi</title>
+        <style>
+          body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          
+          .dark-mode {
+            background-color: black;
+            color: white;
+          }
+          </style>        
+    </head>
+        <body id='colr'>
+            <p id='dark'>hi there </p>
+            <h2 id='title'> </h2>
+            <h3 id="time" style="font-size: 50px;"></h3>
+            <button onclick="myFunction()">Toggle dark mode</button>
+
+
+
+
+<script>
+      const name = prompt("Enter your name","Anonymous");
+      title.innerText += `Welcome to the family ${name}`;
+
+      function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+const acolr = document.getElementById('colr');
+acolr.classList.remove('black');
+acolr.classList.toggle('blue');
+acolr.classList.toggle('blue');
+
+const ctime = document.getElementById('time');
+
+
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+
+ clock();
+
+setInterval(clock,10000);
+
+        </script>
+        </script>
+      
+    </body>
+
+</html>
