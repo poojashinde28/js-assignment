@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <h2>This is Day 2 assigment second question  </h2>
+    </head>
+        <body>
+            <p >hi there </p>
+            <script>
+                //var arr=['red','blue','yellow','black','white'];
+                var arr=['red','yellow','blue','black','red'];
+
+               
+function changeColor(){
+    
+
+    setTimeout(()=>{
+        for(let i=1; i<arr.length;i++){
+        console.log(arr[i]);
+        document.body.style.backgroundColor = arr[i];
+        //document.body.style.color = 'yellowgreen';
+        document.body.style.fontFamily = 'Helvetica';}
+    },3000);
+
+
+}
+changeColor()
+
+//alternate
+/* 
+            var arr=['red','yellow','blue','black','red','black','blue','cyan'];
+                
+               
+    function changeColor(x){
+    
+        
+        console.log(x);
+        document.body.style.backgroundColor = x;
+        //document.body.style.color = 'yellowgreen';
+        document.body.style.fontFamily = 'Helvetica';
+  
+
+
+}
+let i=0;
+while( i<arr.length){
+    setTimeout(()=>{
+        changeColor(arr[i]);
+        console.log(i,arr[i]);
+        i=i+1
+    },5000);
+
+}
+*/
+            </script>
+        </body>
+
+</html>
