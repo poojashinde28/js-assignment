@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  
+</head>
+<body>
+hour: <input type="text" id="hr" ><br><br>
+min: <input type="text" id="min" ><br><br>
+sec: <input type="text" id="sec" ><br><br>
+
+
+
+<button onclick="myFunction()">add</button><br><br>
+
+<button onclick="startTime()" >Start</button>&nbsp;&nbsp;&nbsp;
+  
+    <br><br>
+    <div id="txt"></div>
+    
+    </div>
+    
+      <script> 
+function myFunction() {
+  var x = Number(document.getElementById("hr").value);
+  var y = Number(document.getElementById("min").value);
+  var z = Number(document.getElementById("sec").value);
+  
+ // document.write(x);
+  //document.write(y);
+  //document.write(z);
+ //console.log(typeof(x));
+  limit=60*x+60*y+z;
+  console.log(limit);
+}
+
+
+     
+  var h = 0
+  var m =0
+  var s =0
+  var t
+  let count = 0
+  function startTime() {
+  
+       s++
+          
+          if(s >= 60){
+              m++
+              s = 0
+              if(m >= 60){
+                  h++
+                  m = 0
+              }
+          }
+      
+  
+  document.getElementById('txt').innerHTML =h + ":" + m + ":" + s ;
+
+ 
+
+   t = setTimeout(startTime, 1000);
+  //console.log(limit);
+   if(t==limit){
+   
+    clearTimeout(t)}
+ 
+}
+ 
+
+
+</script>
+
+    
+</body>
+</html>
